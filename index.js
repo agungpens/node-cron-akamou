@@ -16,7 +16,7 @@ console.log(
 // Mendapatkan tanggal hari ini dalam format yang sesuai dengan format tanggal di
 const todayDate = moment().format("YYYY-MM-DD");
 
-cron.schedule("59 23 * * *", function () {
+cron.schedule("* * * * *", function () {
   console.log(
     chalk.bgGreen(
       "---------------------- START / CONNECTED-------------------------\n"
@@ -50,6 +50,7 @@ function UpdateMou() {
   axios
     .get(api_url)
     .then((response) => {
+        return response
       console.log(chalk.green("MOU update response: " + response.data));
     })
     .catch((error) => {
