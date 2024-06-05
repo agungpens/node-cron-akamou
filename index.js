@@ -16,7 +16,7 @@ console.log(
 // Mendapatkan tanggal hari ini dalam format yang sesuai dengan format tanggal di
 const todayDate = moment().format("YYYY-MM-DD");
 
-cron.schedule("30 16 * * *", function () {
+cron.schedule("34 17 * * *", function () {
   console.log(
     chalk.bgGreen(
       "---------------------- START / CONNECTED-------------------------\n"
