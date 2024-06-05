@@ -2,9 +2,8 @@ const fs = require("fs");
 const cron = require("node-cron");
 const chalk = require("chalk");
 const moment = require("moment");
-const queries = require("./query");
+
 const axios = require("axios");
-const mysql = require("mysql");
 
 console.log(
   chalk.blue("-------------------------------------------------------------")
@@ -46,7 +45,7 @@ cron.schedule("59 23 * * *", function () {
 
 // Function untuk mengupdate status dokumen MOU
 function UpdateMou() {
-  let api_url = "http://localhost/LARAVEL/akamou/public/api/updateDataMou"; // lokal
+  let api_url = "https://hello-ivy.id/AGUNG-MOU/public/api/updateDataMou"; // lokal
   axios
     .get(api_url)
     .then((response) => {
@@ -59,7 +58,7 @@ function UpdateMou() {
 
 // Function untuk mengupdate status dokumen MOA
 function UpdateMoa() {
-  let api_url = "http://localhost/LARAVEL/akamou/public/api/updateDataMoa"; // lokal
+  let api_url = "https://hello-ivy.id/AGUNG-MOU/public/api/updateDataMoa"; // lokal
   axios
     .get(api_url)
     .then((response) => {
