@@ -46,11 +46,11 @@ cron.schedule("* * * * *", function () {
 // Function untuk mengupdate status dokumen MOU
 function UpdateMou() {
   //   let api_url = "http://localhost/LARAVEL/akamou/public/api/updateDataMou"; // lokal
-  let api_url = "https://hello-ivy.id/AGUNG-MOU/public/api/updateDataMou"; // public
+  let api_url = "https://agungaldi.pjjaka.com/api/updateDataMou"; // public
   axios
     .get(api_url)
     .then((response) => {
-        return response
+      return response;
       console.log(chalk.green("MOU update response: " + response.data));
     })
     .catch((error) => {
@@ -61,7 +61,7 @@ function UpdateMou() {
 // Function untuk mengupdate status dokumen MOA
 function UpdateMoa() {
   //   let api_url = "http://localhost/LARAVEL/akamou/public/api/updateDataMoa"; // lokal
-  let api_url = "https://hello-ivy.id/AGUNG-MOU/public/api/updateDataMoa"; // public
+  let api_url = "https://agungaldi.pjjaka.com/api/updateDataMoa"; // public
   axios
     .get(api_url)
     .then((response) => {
