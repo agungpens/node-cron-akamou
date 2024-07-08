@@ -28,8 +28,8 @@ pipeline {
 
         stage('Run') {
             steps {
-                // sh 'sudo docker stop node-cron-akamou'
-                // sh 'sudo docker rm node-cron-akamou'
+                sh 'sudo docker stop node-cron-akamou'
+                sh 'sudo docker rm node-cron-akamou'
                 sh 'sudo docker run -d --name node-cron-akamou -p 1234:1234 node-cron-akamou:latest'
             }
         }
